@@ -1,10 +1,19 @@
-const Modal = ({ src, onClose }) => {
+import Modal from 'react-modal'
+Modal.setAppElement('#root') 
+
+const ModalViewer = ({ src, onClose }) => {
   return (
-    <div className="modal" onClick={onClose}>
+    <Modal
+      isOpen={!!src}
+      onRequestClose={onClose}
+      contentLabel="Image Viewer"
+      className="modal"
+      overlayClassName="modal-overlay"
+    >
       <span className="close" onClick={onClose}>&times;</span>
-      <img className="modal-content" src={src} />
-    </div>
+      <img src={src} className="modal-content" />
+    </Modal>
   )
 }
 
-export default Modal
+export default ModalViewer
