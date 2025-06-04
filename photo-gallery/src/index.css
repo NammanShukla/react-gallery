@@ -38,6 +38,11 @@ header{
 /*********** Style for the Modal *************/ 
 
 .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 100;
 }
@@ -72,7 +77,7 @@ header{
   top: -40px;
   right: 0;
   font-size: 32px;
-  color: white;
+  color: #d5f951;
   cursor: pointer;
 }
 
@@ -89,42 +94,12 @@ header{
 }
 
 .carousel-container {
-    width: 80vw;
-    max-width: 1000px;
-    margin: 20px auto;
-    position: relative;
+  width: 80vw;
+  max-width: 1000px;
+  margin: 20px auto;
+  position: relative;
 }
 
-.carousel{
-    display: flex;
-    transition: transform 0.4s ease;
-    gap: 10px; 
-}
-
-.carousel img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    cursor: pointer; 
-    transition: transform 0.2s ease; 
-}
-
-.carousel img:hover {
-    transform: scale(1.05);
-}
-
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 2;
-}
 
 .custom-arrow {
   position: absolute;
@@ -146,9 +121,11 @@ header{
 }
 
 .custom-arrow.prev {
-  left: -30px;
+  left: -45px;
+  color: #d5f951;
 }
 
 .custom-arrow.next {
-  right: -30px;
+  right: -45px;
+  color: #d5f951;
 }
